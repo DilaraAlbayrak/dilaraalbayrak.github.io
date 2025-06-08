@@ -687,7 +687,7 @@ textarea {
     top: 7px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #eee;
+    background-color: #003871;
     border-radius: 50%;
     opacity: 1;
     animation: wheel 1.3s infinite;
