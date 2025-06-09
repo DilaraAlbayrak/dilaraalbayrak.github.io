@@ -306,12 +306,22 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
+
 .projects__row--equal {
-  display: flex;
-  gap: 5rem;
-  justify-content: center;
-  align-items: stretch; /* <- burada fark yaratıyor */
-  margin-bottom: 11rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  margin-bottom: 8rem;
+}
+
+.projects__img-link {
+  aspect-ratio: 8 / 7;
+  height: auto; 
+}
+
+.projects__img-link:hover .projects__img-wrapper {
+  transform: scale(1.03);
 }
 
 .projects__img-wrapper {
@@ -322,28 +332,19 @@ textarea {
   overflow: hidden;
 }
 
-.projects__img-link:hover .projects__img-wrapper {
-  transform: scale(1.03);
-}
-
-.projects__img-link {
-  aspect-ratio: 8 / 7;
-  height: auto; /* tarayıcı ayarlıyor */
-}
-
 .projects__row-img {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
 }
-
 
 .projects__img-label {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: bold;
   color: #003871;
   text-shadow: 1px 1px 3px white;
