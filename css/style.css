@@ -308,27 +308,29 @@ textarea {
 
 .projects__row--equal {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5rem;
   margin-bottom: 11rem;
-  align-items: start;
 }
 
 .projects__img-link {
   display: block;
   width: 100%;
-  text-align: center;
 }
 
 .projects__img-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 8 / 7;
+  aspect-ratio: 823 / 714; /* monitörün doğal oranı */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects__row-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -338,19 +340,13 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
   font-weight: bold;
-  colour: #003871;
+  color: #003871;
   text-shadow: 1px 1px 3px white;
   pointer-events: none;
   text-align: center;
   width: 100%;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .projects__row--equal {
-    grid-template-columns: 1fr;
-  }
 }
 
 .projects__row {
