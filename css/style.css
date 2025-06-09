@@ -307,32 +307,33 @@ textarea {
         margin-bottom: 4rem; }
 
 .projects__row--equal {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
   gap: 5rem;
+  justify-content: center;
+  align-items: stretch; /* <- burada fark yaratıyor */
   margin-bottom: 11rem;
 }
 
 .projects__img-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 823 / 714;
+  height: 100%;
   background: #f0f0f0;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .projects__img-link:hover .projects__img-wrapper {
   transform: scale(1.03);
 }
 
+.projects__img-link {
+  aspect-ratio: 8 / 7;
+  height: auto; /* tarayıcı ayarlıyor */
+}
+
 .projects__row-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: contain;
 }
 
