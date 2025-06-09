@@ -311,22 +311,46 @@ textarea {
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   margin-bottom: 11rem;
+  align-items: start;
 }
 
 .projects__img-link {
   display: block;
-  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.projects__img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 8 / 7;
 }
 
 .projects__row-img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.projects__img-link:hover .projects__row-img {
-  transform: scale(1.02); /* Hafif büyütme efekti */
+.projects__img-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+  font-weight: bold;
+  colour: #003871;
+  text-shadow: 1px 1px 3px white;
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projects__row--equal {
+    grid-template-columns: 1fr;
+  }
 }
 
 .projects__row {
