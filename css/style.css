@@ -311,7 +311,6 @@ textarea {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5rem;
   margin-bottom: 11rem;
-  align-items: start;
 }
 
 .projects__img-link {
@@ -322,7 +321,11 @@ textarea {
 .projects__img-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 823 / 714; 
+  aspect-ratio: 823 / 714; /* monitör.png doğal oran */
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -338,7 +341,7 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
   font-weight: bold;
   color: #003871;
   text-shadow: 1px 1px 3px white;
