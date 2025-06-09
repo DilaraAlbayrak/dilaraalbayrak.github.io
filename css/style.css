@@ -306,6 +306,29 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
+.projects__row--equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 11rem;
+}
+
+.projects__img-link {
+  display: block;
+  overflow: hidden;
+}
+
+.projects__row-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projects__img-link:hover .projects__row-img {
+  transform: scale(1.02); /* Hafif büyütme efekti */
+}
+
 .projects__row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
