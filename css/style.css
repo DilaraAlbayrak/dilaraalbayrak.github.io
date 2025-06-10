@@ -350,6 +350,8 @@ textarea {
   background: #ffffff;
   overflow: hidden;
   position: relative;
+  display: flex; /* Metni hizalamak için flex kullanıyoruz */
+  align-items: center; /* Dikey ortalamayı sağlar */
 }
 
 .projects__img-label {
@@ -357,7 +359,7 @@ textarea {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  font-size: calc(1rem + 1vw); /* Kapsayıcı genişliğine göre ölçeklenir */
+  font-size: calc(0.8rem + 0.6vw); /* Daha küçük ve kontrollü ölçek */
   font-weight: normal;
   color: #003871;
   text-shadow: 1px 1px 3px white;
@@ -365,6 +367,10 @@ textarea {
   text-align: left;
   width: 80%;
   padding-left: 1rem;
+  white-space: normal; /* Metnin birden fazla satıra geçmesine izin ver */
+  overflow: hidden; /* Taşmayı gizle */
+  text-overflow: ellipsis; /* Uzun metinler için ... ekler */
+  max-width: 90%; /* Monitör genişliğini aşmasın */
 }
 
 .projects__row {
@@ -381,17 +387,19 @@ textarea {
 
 @media only screen and (max-width: 56.25em) { /* 900px */
   .projects__img-label {
-    font-size: calc(0.8rem + 1.5vw); /* Mobil için daha küçük ölçek */
-    left: 5%; /* Mobilde daha içe kaydır */
+    font-size: calc(0.6rem + 0.4vw); /* Mobil için daha küçük ölçek */
+    left: 5%;
+    max-width: 85%; /* Mobilde biraz daha daralt */
   }
 }
 
+/* Çok küçük ekranlar için ek ayar */
 @media only screen and (max-width: 37.5em) { /* 600px */
   .projects__img-label {
-    font-size: calc(0.6rem + 1vw); /* Çok küçük ekranlar için daha küçük */
+    font-size: calc(0.5rem + 0.3vw); /* Çok küçük ekranlar için daha kontrollü */
+    max-width: 80%; /* Daha dar bir alan */
   }
 }
-
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
