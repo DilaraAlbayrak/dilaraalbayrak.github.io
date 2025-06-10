@@ -311,6 +311,8 @@ textarea {
   width: 100%; /* Tam genişlik */
   aspect-ratio: 8 / 7; /* Oran korunsun */
   display: block; /* Linkin düzgün hizalanması için */
+  border: none; /* Sınırları kaldır */
+  outline: none; /* Çizgiyi kaldır */
 }
 
 .projects__img-link:hover .projects__img-wrapper {
@@ -320,19 +322,22 @@ textarea {
 .projects__row--equal {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 sabit sütun */
-  gap: 3rem; /* Monitörler arası boşluk */
+  gap: 4rem; /* Monitörler arası boşluk */
   justify-items: center; /* Ortalanmış hizalama */
   margin-bottom: 8rem;
   max-width: 120rem; /* Maksimum genişlik */
   margin-left: auto;
   margin-right: auto; /* Ortalanma */
+  background: #fafafa;
 }
 
 .projects__row-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* Resmin oranını koru */
   display: block;
+  border: none; /* Resmin etrafındaki sınırları kaldır */
+  outline: none; /* Çizgiyi kaldır */
 }
 
 .projects__row.projects__row--equal {
@@ -356,9 +361,11 @@ textarea {
 .projects__img-wrapper {
   width: 100%;
   height: 100%;
-  background: #f0f0f0;
+  background: #fafafa; /* Websitenin arka plan rengi ile eşleşsin */
   overflow: hidden;
   position: relative;
+  border: none; /* Gereksiz sınırları kaldır */
+  outline: none; /* Çizgiyi kaldır */
 }
 
 .projects__row {
