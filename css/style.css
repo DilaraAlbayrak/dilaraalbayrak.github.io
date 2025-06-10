@@ -322,7 +322,7 @@ textarea {
 .projects__row--equal {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 sabit sütun */
-  gap: 4rem; /* Monitörler arası boşluk */
+  gap: 6rem; /* Monitörler arası boşluk */
   justify-items: center; /* Ortalanmış hizalama */
   margin-bottom: 8rem;
   max-width: 120rem; /* Maksimum genişlik */
@@ -346,16 +346,17 @@ textarea {
 
 .projects__img-label {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  font-weight: bold;
+  top: 50%; /* Dikey ortalamayı koru */
+  left: 10%; /* Soldan hizalama için biraz içe kaydır */
+  transform: translateY(-50%); /* Y ekseninde tam ortala */
+  font-size: clamp(1.5rem, 3vw, 2.2rem); /* Daha büyük ve responsive */
+  font-weight: normal; /* Bold değil */
   color: #003871;
   text-shadow: 1px 1px 3px white;
   pointer-events: none;
-  text-align: center;
-  width: 100%;
+  text-align: left; /* Sol hizalama */
+  width: 80%; /* Monitör genişliğine göre ayar */
+  padding-left: 1rem; /* İsteğe bağlı, metni daha içe kaydırır */
 }
 
 .projects__img-wrapper {
