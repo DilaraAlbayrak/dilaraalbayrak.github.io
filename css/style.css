@@ -309,10 +309,11 @@ textarea {
 
 .projects__row--equal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 sabit sütun */
   gap: 3rem;
   justify-items: center;
   margin-bottom: 8rem;
+  max-width: 100%; /* Ekranı aşmasını önler */
 }
 
 .projects__img-link {
@@ -358,6 +359,12 @@ textarea {
   grid-template-columns: 1.5fr 1fr;
   grid-gap: 5rem;
   margin-bottom: 11rem; }
+
+  @media only screen and (max-width: 56.25em) {
+  .projects__row--equal {
+    grid-template-columns: 1fr; /* Tek sütun */
+  }
+}
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
