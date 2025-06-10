@@ -307,30 +307,25 @@ textarea {
         margin-bottom: 4rem; }
 
 
-.projects__row--equal {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 sabit sütun */
-  gap: 3rem;
-  justify-items: center;
-  margin-bottom: 8rem;
-  max-width: 100%; /* Ekranı aşmasını önler */
-}
-
 .projects__img-link {
-  aspect-ratio: 8 / 7;
-  height: auto; 
+  width: 100%; /* Tam genişlik */
+  aspect-ratio: 8 / 7; /* Oran korunsun */
+  display: block; /* Linkin düzgün hizalanması için */
 }
 
 .projects__img-link:hover .projects__img-wrapper {
   transform: scale(1.03);
 }
 
-.projects__img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #f0f0f0;
-  overflow: hidden;
+.projects__row--equal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sabit sütun */
+  gap: 3rem; /* Monitörler arası boşluk */
+  justify-items: center; /* Ortalanmış hizalama */
+  margin-bottom: 8rem;
+  max-width: 120rem; /* Maksimum genişlik */
+  margin-left: auto;
+  margin-right: auto; /* Ortalanma */
 }
 
 .projects__row-img {
@@ -338,6 +333,10 @@ textarea {
   height: 100%;
   object-fit: contain;
   display: block;
+}
+
+.projects__row.projects__row--equal {
+  grid-template-columns: repeat(3, 1fr) !important; /* Zorla 3 sütun */
 }
 
 .projects__img-label {
@@ -354,6 +353,14 @@ textarea {
   width: 100%;
 }
 
+.projects__img-wrapper {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
 .projects__row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -362,7 +369,7 @@ textarea {
 
   @media only screen and (max-width: 56.25em) {
   .projects__row--equal {
-    grid-template-columns: 1fr; /* Tek sütun */
+    grid-template-columns: 1fr;
   }
 }
   @media only screen and (max-width: 56.25em) {
@@ -377,10 +384,7 @@ textarea {
     margin-bottom: 0; }
   .projects__row-img-cont {
     overflow: hidden; }
-  .projects__row-img {
-    width: 100%;
-    display: block;
-    object-fit: cover; }
+
   .projects__row-content {
     padding: 2rem 0;
     display: flex;
