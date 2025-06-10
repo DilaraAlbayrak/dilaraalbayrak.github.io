@@ -357,7 +357,7 @@ textarea {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
-  font-size: calc(1rem + 2vw); /* Kapsayıcı genişliğine göre ölçeklenir */
+  font-size: calc(1rem + 1vw); /* Kapsayıcı genişliğine göre ölçeklenir */
   font-weight: normal;
   color: #003871;
   text-shadow: 1px 1px 3px white;
