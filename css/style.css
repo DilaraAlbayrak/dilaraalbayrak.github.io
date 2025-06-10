@@ -356,9 +356,9 @@ textarea {
 
 .projects__img-label {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 10%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   font-size: calc(0.8rem + 0.6vw); /* Daha küçük ve kontrollü ölçek */
   font-weight: normal;
   color: #003871;
