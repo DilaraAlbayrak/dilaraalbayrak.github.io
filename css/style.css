@@ -336,7 +336,7 @@ textarea {
 }
 
 .projects__row.projects__row--equal {
-  grid-template-columns: repeat(3, 1fr) !important; /* Zorla 3 sütun */
+  grid-template-columns: repeat(3, 2fr) !important; /* Zorla 3 sütun */
 }
 
 .projects__img-label {
