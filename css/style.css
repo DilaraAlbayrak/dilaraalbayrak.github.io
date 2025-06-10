@@ -344,29 +344,27 @@ textarea {
   grid-template-columns: repeat(3, 2fr) !important; /* Zorla 3 sütun */
 }
 
-.projects__img-label {
-  position: absolute;
-  top: 50%; /* Dikey ortalamayı koru */
-  left: 10%; /* Soldan hizalama için biraz içe kaydır */
-  transform: translateY(-50%); /* Y ekseninde tam ortala */
-  font-size: clamp(1.5rem, 3vw, 2.2rem); /* Daha büyük ve responsive */
-  font-weight: normal; /* Bold değil */
-  color: #003871;
-  text-shadow: 1px 1px 3px white;
-  pointer-events: none;
-  text-align: left; /* Sol hizalama */
-  width: 80%; /* Monitör genişliğine göre ayar */
-  padding-left: 1rem; /* İsteğe bağlı, metni daha içe kaydırır */
-}
-
 .projects__img-wrapper {
   width: 100%;
   height: 100%;
-  background: #FFFFFF; /* Websitenin arka plan rengi ile eşleşsin */
+  background: #ffffff;
   overflow: hidden;
   position: relative;
-  border: none; /* Gereksiz sınırları kaldır */
-  outline: none; /* Çizgiyi kaldır */
+}
+
+.projects__img-label {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-size: calc(1rem + 2vw); /* Kapsayıcı genişliğine göre ölçeklenir */
+  font-weight: normal;
+  color: #003871;
+  text-shadow: 1px 1px 3px white;
+  pointer-events: none;
+  text-align: left;
+  width: 80%;
+  padding-left: 1rem;
 }
 
 .projects__row {
@@ -380,6 +378,20 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+@media only screen and (max-width: 56.25em) { /* 900px */
+  .projects__img-label {
+    font-size: calc(0.8rem + 1.5vw); /* Mobil için daha küçük ölçek */
+    left: 5%; /* Mobilde daha içe kaydır */
+  }
+}
+
+@media only screen and (max-width: 37.5em) { /* 600px */
+  .projects__img-label {
+    font-size: calc(0.6rem + 1vw); /* Çok küçük ekranlar için daha küçük */
+  }
+}
+
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
@@ -735,10 +747,10 @@ textarea {
     font-size: 1.5rem;
     line-height: 1.7; }
   .main-footer__social-cont {
-    margin-top: 2rem; }
+    margin-top: 1rem; }
   .main-footer__icon {
     margin-right: 1rem;
-    width: 2.5rem; }
+    width: 4.0rem; }
     .main-footer__icon--mr-none {
       margin-right: 0; }
   .main-footer__lower {
