@@ -89,28 +89,39 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
-            <video src="./assets/videos/Vulkan.mp4" class="project-details__video" controls width="50%" preload="metadata"></video>
-  <video src="./assets/videos/Dx11.mp4" class="project-details__video" controls width="50%" preload="metadata"></video>
+            <video src="./assets/videos/Vulkan.mp4" class="project-details__video" controls width="49%" preload="metadata"></video>
+  <video src="./assets/videos/Dx11.mp4" class="project-details__video" controls width="49%" preload="metadata"></video>
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Neque alias tenetur minus quaerat
-                aliquid, aut provident blanditiis, deleniti aspernatur ipsam
-                eaque veniam voluptatem corporis vitae mollitia laborum corrupti
-                ullam rem?
+                At this early stage, I am exploring which graphics API best suits the project's requirements. The videos above demonstrate the initial output of rendering a low-resolution Moon terrain using both Vulkan and DirectX 11. My aim is to select one of these APIs and refine the rendering pipeline in line with academic research and performance optimisation strategies. Below table shows my initial findings.
               </p>
-              <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem?
-              </p>
+              <table><thead>
+  <tr>
+    <th><br>num. faces</th>
+    <th>Vulkan</th>
+    <th>DirectX11</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>800k</td>
+    <td>~300 FPS</td>
+    <td>~180 FPS</td>
+  </tr>
+  <tr>
+    <td>2m</td>
+    <td>~300 FPS</td>
+    <td>bad_alloc</td>
+  </tr>
+  <tr>
+    <td>8m</td>
+    <td>bad_alloc</td>
+    <td>bad_alloc</td>
+  </tr>
+</tbody>
+</table>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
