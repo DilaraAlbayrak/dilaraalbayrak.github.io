@@ -571,12 +571,32 @@ textarea {
   max-width: 70rem;
   margin: auto; }
 
+.project-details__desc table {
+  margin: 4rem auto; 
+  width: 90%;
+  max-width: 100rem; 
+  font-size: 1.8rem; 
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.project-details__desc th,
+.project-details__desc td {
+  padding: 1.5rem 2rem;
+  border: 1px solid #ccc;
+}
+
+.project-details__desc th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+
 .project-details__desc {
   margin: 0 0 7rem 0; }
   .project-details__desc-para {
     font-size: 1.8rem;
     line-height: 1.7;
-    color: grey;
+    color: navy;
     margin-bottom: 2rem; }
 
 .project-details__tools-used {
