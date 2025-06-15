@@ -467,6 +467,19 @@ textarea {
   border-radius: 8px;
 }
 
+.project-details__desc-list {
+  list-style: disc;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.project-details__desc-list li {
+  margin-bottom: 1.5rem;
+}
+
 .media-caption {
   font-size: 1.3rem;
   font-weight: 500;

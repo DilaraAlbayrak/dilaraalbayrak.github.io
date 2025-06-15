@@ -77,10 +77,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Rendering Pipeline for High-Fidelity Lunar Terrain</h1>
+        <h1 class="heading-primary">VR Application for Virtual Moon Visit based on NASA LROC Data</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            I'm currently working on this for my master's project. The goal is to create a high-fidelity Moon terrain rendering for VR environments, using the Vulkan Graphics API. The project is in its early stages. 
+            The project involved developing a realistic 3D model of the Moon’s surface and integrating it into a VR environment, allowing users to experience a virtual lunar exploration.
           </p>
         </div>
       </div>
@@ -110,35 +110,32 @@
           <div class="project-details__content-main">
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
-  <p class="project-details__desc-para">
-    At this early stage, I am exploring which graphics API best suits the project's requirements. The videos above demonstrate the initial output of rendering a low-resolution Moon terrain using both Vulkan and DirectX 11. My aim is to select one of these APIs and refine the rendering pipeline in line with academic research and performance optimisation strategies. Below table shows my initial findings.
-  </p>
-  <table>
-    <thead>
-      <tr>
-        <th><br>num. faces</th>
-        <th>Vulkan</th>
-        <th>DirectX11</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>800k</td>
-        <td>~300 FPS</td>
-        <td>~180 FPS</td>
-      </tr>
-      <tr>
-        <td>2m</td>
-        <td>~300 FPS</td>
-        <td>bad_alloc</td>
-      </tr>
-      <tr>
-        <td>8m</td>
-        <td>bad_alloc</td>
-        <td>bad_alloc</td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="project-details__desc-list">
+    <li>
+      Collaborated as part of a team to develop an immersive Virtual Reality (VR) experience based on a detailed 3D model of a selected lunar region, aiming to make the surface digitally explorable.
+    </li>
+    <li>
+      Took primary responsibility for generating a high-fidelity terrain model of the Moon, focusing on accuracy and visual realism.
+    </li>
+    <li>
+      Utilised NASA’s LROC Digital Terrain Model (DTM) data, processed through the GDAL library in Python, to reconstruct the surface geometry.
+    </li>
+    <li>
+      Incorporated high-resolution orthographic imagery from the same dataset to enhance visual detail, particularly for texturing purposes.
+    </li>
+    <li>
+      Applied a series of image processing techniques using OpenCV and NumPy to refine the orthomaps—these included delighting, noise reduction, and other enhancements to improve texture clarity and consistency.
+    </li>
+    <li>
+      Further improved texture resolution by applying a GAN-based super-resolution method, increasing visual fidelity for VR rendering.
+    </li>
+    <li>
+      The model showcases a 1024m × 1024m section of the lunar surface. A lower-resolution version is viewable via the Sketchfab embed above; high-quality textures and the enhanced version can be accessed through the download link provided below.
+    </li>
+    <li>
+      Finally, the data-driven Moon model was integrated into a Unity-based VR application and successfully deployed to the Meta Quest 3 headset, allowing for an interactive and immersive exploration experience.
+    </li>
+  </ul>
 </div>
 
             <div class="project-details__tools-used">
