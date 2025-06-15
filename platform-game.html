@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Platform Game</title>
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/dilara-albayrak.png"
+              alt="Dilara Albayrak Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Dilara Albayrak</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Rendering Prototype for 2.5D Platform Game on DirectX 11</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            This project is a 2.5D platformer demo developed as part of a final assignment for C++ and Real-Time Graphics modules. It focuses on building a scene from scratch with multiple rendering, shading, and animation techniques implemented using DirectX 11.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont project-details__video-wrapper">
+    <video src="./assets/videos/game.mp4" class="project-details__video" controls preload="metadata"></video>
+  </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+  <h3 class="project-details__content-title">Project Overview</h3>
+  <ul class="project-details__desc-list">
+  <li>Developed a 2.5D platformer game level with distinct foreground, background, and skybox layers to simulate depth perception.</li>
+  <li>Built a custom <strong>.OBJ model loader</strong> to import 3D models directly into the game engine without relying on external libraries.</li>
+  <li>Integrated per-pixel (Phong) and per-vertex (Gouraud) shading, as well as <strong>texture mapping</strong> and <strong>bump mapping</strong> for surface detail.</li>
+  <li>Added dynamic lighting modes: directional ambient daylight and player-oriented torchlight with real-time switching.</li>
+  <li>Ensured responsive real-time rendering using <strong>DirectX 11</strong>, <strong>DirectXMath</strong>, and <strong>ImGui</strong> for interface components like debug stats.</li>
+  <li>Designed a zoomable and follow-style camera that tracks the player’s movement and maintains a consistent frame composition.</li>
+  <li>Game logic and animation parameters (e.g. time speed, object behaviour) were driven via external <strong>configuration files</strong>.</li>
+  <li>Used <strong>ImGui</strong> to toggle visual effects and display runtime statistics such as FPS, active light mode, and player coordinates.</li>
+  <li>Applied static code analysis with <strong>Parasoft C/C++test</strong> to ensure code reliability, compliance with industry standards, and maintainability.</li>
+</ul>
+</div>
+
+            <div class="project-details__tools-used">
+              <div class="skills">
+                <div class="skills__skill">DirectX 11</div>
+                <div class="skills__skill">C++</div>
+                <div class="skills__skill">OBJ Parsing</div>
+                <div class="skills__skill">Shading</div>
+                <div class="skills__skill">Texture Mapping</div>
+                <div class="skills__skill">Bump Mapping</div>
+                <div class="skills__skill">Parasoft</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <a
+                href="https://github.com/DilaraAlbayrak/platform-game"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dilara-albayrak-45b284193/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/DilaraAlbayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico2.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.researchgate.net/profile/Dilara-Albayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/researchgate-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Dilara Albayrak</h4>
+            <p class="main-footer__short-desc">
+              You can contact me via <a href="mailto:dilara0albayrak@gmail.com">dilara0albayrak@gmail.com</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2025
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
