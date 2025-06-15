@@ -80,7 +80,7 @@
         <h1 class="heading-primary">Manufacturing Part Recognition by Training 2D Views</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            This is a work-in-progress project focused on developing a distributed, networked physics simulation. The system combines real-time multithreaded physics, collision response, and peer-to-peer networking using DirectX 11 and Winsock 2.
+            This project tackles the problem of recognising highly similar manufacturing parts using only their 3D CAD models, without requiring real annotated images. By leveraging synthetic data generated in a Unity-based simulation environment, it trains a deep network to identify parts through a two-stage classification approach. The method applies domain randomisation to bridge the gap between simulation and real-world conditions.
           </p>
         </div>
       </div>
@@ -89,33 +89,42 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont project-details__video-wrapper">
-    <video src="./assets/videos/room.mp4" class="project-details__video" controls preload="metadata"></video>
+    <video src="./assets/videos/recognition.mp4" class="project-details__video" controls preload="metadata"></video>
   </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
-  <p class="project-details__desc-para">
-    This ongoing project involves building a distributed, peer-to-peer physics simulation, where objects from multiple computers interact in real time within a shared physics-based environment. The simulation integrates multithreaded physics (gravity, collision detection and response), synchronised global state, and adjustable simulation frequencies, all developed using DirectX 11 and Winsock 2. Above video is a snapshot of the early stage of the project.
-  </p>
+  <ul>
+  <li><strong>Problem Definition:</strong> Recognising similar-looking manufacturing parts using only 3D CAD models, without real annotated image datasets.</li>
+  <li><strong>Simulation Environment:</strong> Developed a Unity-based setup replicating a real-world multi-camera rig to render synthetic images from 3D models.</li>
+  <li><strong>Data Augmentation:</strong> Adopted domain randomisation, including background textures, lighting variation, geometric transformations, and motion blur to enhance generalisation to real-world images.</li>
+  <li><strong>One-Stage Approach (Baseline):</strong> Adapted MVCNN architecture with three ResNet18 branches for multi-view feature extraction and part classification using synthetic data.</li>
+  <li><strong>Two-Stage Architecture:</strong> Introduced a scalable two-stage network:
+    <ul>
+      <li>Stage 1: Predicts cluster ID from pseudo-labelled groups of parts (e.g. 20 clusters).</li>
+      <li>Stage 2: A specialised classifier per cluster refines the part classification.</li>
+    </ul>
+  </li>
+  <li><strong>Training Details:</strong> All networks trained using Adam optimiser for 40 epochs, with weight decay and learning rate scheduling. Pretrained ResNet18 backbones used in all branches.</li>
+  <li><strong>Qualitative Results:</strong> Visual tests show the two-stage model is more robust to occlusion, lighting variation, and minor part differences.</li>
+</ul>
 </div>
 
             <div class="project-details__tools-used">
               <div class="skills">
-                <div class="skills__skill">DirectX 11</div>
-                <div class="skills__skill">C++</div>
-                <div class="skills__skill">Physics Simulation</div>
-                <div class="skills__skill">Multithreading</div>
-                <div class="skills__skill">Concurrency</div>
-                <div class="skills__skill">P2P Networking</div>
-                <div class="skills__skill">Winsock 2</div>
-                <div class="skills__skill">UDP</div>
-                <div class="skills__skill">ImGui</div>
-                <div class="skills__skill">FlatBuffers</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">Pytorch</div>
+                <div class="skills__skill">Multi-View CNN</div>
+                <div class="skills__skill">Domain Randomisation</div>
+                <div class="skills__skill">Sim2Real</div>
+                <div class="skills__skill">ResNet</div>
+                <div class="skills__skill">Qt</div>
+                <div class="skills__skill">Linux</div>
               </div>
             </div>
             <div class="project-details__links">
               <a
-                href="https://github.com/DilaraAlbayrak/distributed-simulation"
+                href="https://github.com/DilaraAlbayrak/manufacturing-part-recognition"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 >Code Link</a
