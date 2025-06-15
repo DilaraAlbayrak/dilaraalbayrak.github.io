@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Terrain Rendering</title>
+    <title>Visual Saliency in VR</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -77,10 +77,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Rendering Pipeline for High-Fidelity Lunar Terrain</h1>
+        <h1 class="heading-primary">Enhancing the User Experience of 3D Displayed VR Scenes (Visual Saliency)</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            I'm currently working on this for my master's project. The goal is to create a high-fidelity Moon terrain rendering for VR environments, using the Vulkan Graphics API. The project is in its early stages. 
+            This research project explores visual saliency for immersive VR environments. The end goal is to optimise visual fidelity and performance based on predicted user attention, using both classical and learning-based saliency estimation methods.
           </p>
         </div>
       </div>
@@ -89,59 +89,47 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont project-details__video-wrapper">
-            <video src="./assets/videos/Vulkan.mp4" class="project-details__video" controls width="40%" preload="metadata"></video>
-  <video src="./assets/videos/Dx11.mp4" class="project-details__video" controls width="40%" preload="metadata"></video>
-          </div>
+    <img src="./assets/png/paper.png" alt="Paper Preview" class="project-details__video" />
+  </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
-  <p class="project-details__desc-para">
-    At this early stage, I am exploring which graphics API best suits the project's requirements. The videos above demonstrate the initial output of rendering a low-resolution Moon terrain using Vulkan or DirectX 11. My aim is to select one of these APIs and refine the rendering pipeline in line with academic research and performance optimisation strategies. Below table shows my initial findings.
-  </p>
-  <table>
-    <thead>
-      <tr>
-        <th><br>num. faces</th>
-        <th>Vulkan</th>
-        <th>DirectX11</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>800k</td>
-        <td>~300 FPS</td>
-        <td>~180 FPS</td>
-      </tr>
-      <tr>
-        <td>2m</td>
-        <td>~300 FPS</td>
-        <td>bad_alloc</td>
-      </tr>
-      <tr>
-        <td>8m</td>
-        <td>bad_alloc</td>
-        <td>bad_alloc</td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="project-details__desc-list">
+<ul class="project-details__desc-list">
+  <li>Investigated real-time visual saliency in immersive VR to optimise rendering workloads based on <strong>eye-tracker data.</strong></li>
+  <li>Integrated both static (image-based) and dynamic (eye-tracking informed) saliency heatmaps into a Unity-based VR application.</li>
+  <li>Benchmarked performance and perceptual quality metrics across multiple experiments on <strong>HTC Vive HMD,</strong> measuring FPS and subjective scene coherence.</li>
+  <li>Conducted <strong>user studies</strong> and visual comparisons using captured saliency overlays and heatmap evaluations on gaze data obtained through <strong>Tobii Eye Tracker.</strong></li>
+  <li>Documented experimental findings and architectural design in an academic-style paper to support reproducibility and future extensions.</li>
+</ul>
+</ul>
 </div>
 
             <div class="project-details__tools-used">
               <div class="skills">
-                <div class="skills__skill">Vulkan</div>
-                <div class="skills__skill">DirectX 11</div>
-                <div class="skills__skill">Visual Studio</div>
-                <div class="skills__skill">C++</div>
-                <div class="skills__skill">Blender</div>
-                <div class="skills__skill">Academic Research</div>
+                <div class="skills__skill">Unity</div>
+                <div class="skills__skill">C#</div>
+                <div class="skills__skill">User Experiment</div>
+                <div class="skills__skill">Visual Saliency</div>
+                <div class="skills__skill">Eye-Tracking</div>
+                <div class="skills__skill">Tobii Eye Tracker</div>
+                <div class="skills__skill">Virtual Reality</div>
+                <div class="skills__skill">Academic Writing</div>
+                <div class="skills__skill">Research</div>
               </div>
             </div>
             <div class="project-details__links">
               <a
-                href="#"
+                href="https://ieeexplore.ieee.org/abstract/document/8919045"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
-                >Code Link</a
+                >Conference Paper</a
+              >
+              <a
+                href="https://www.sciencedirect.com/science/article/abs/pii/S0097849320300388"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Journal Paper</a
               >
             </div>
           </div>
