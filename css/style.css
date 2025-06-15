@@ -468,8 +468,7 @@ textarea {
 }
 
 .project-details__desc-list {
-  list-style: disc;
-  margin-left: 2.5rem;
+  list-style: none;
   padding-left: 0;
   font-size: 1.8rem;
   color: #000;
@@ -477,7 +476,19 @@ textarea {
 }
 
 .project-details__desc-list li {
+  position: relative;
   margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.project-details__desc-list li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  color: black;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 .media-caption {
