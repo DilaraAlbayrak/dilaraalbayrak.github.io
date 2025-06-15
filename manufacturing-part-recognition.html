@@ -94,12 +94,17 @@
           <div class="project-details__content-main">
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
-  <ul>
+  <ul class="project-details__desc-list">
   <li><strong>Problem Definition:</strong> Recognising similar-looking manufacturing parts using only 3D CAD models, without real annotated image datasets.</li>
   <li><strong>Simulation Environment:</strong> Developed a Unity-based setup replicating a real-world multi-camera rig to render synthetic images from 3D models.</li>
   <li><strong>Data Augmentation:</strong> Adopted domain randomisation, including background textures, lighting variation, geometric transformations, and motion blur to enhance generalisation to real-world images.</li>
   <li><strong>One-Stage Approach (Baseline):</strong> Adapted MVCNN architecture with three ResNet18 branches for multi-view feature extraction and part classification using synthetic data.</li>
-  <li><strong>Two-Stage Architecture:</strong> Stage 1: Predicts cluster ID from pseudo-labelled groups of parts (e.g. 20 clusters). Stage 2: A specialised classifier per cluster refines the part classification.</li>
+  <li><strong>Two-Stage Architecture:</strong> Introduced a scalable two-stage network:
+    <ul class="project-details__desc-list">
+      <li>Stage 1: Predicts cluster ID from pseudo-labelled groups of parts (e.g. 20 clusters).</li>
+      <li>Stage 2: A specialised classifier per cluster refines the part classification.</li>
+    </ul>
+  </li>
   <li><strong>Training Details:</strong> All networks trained using Adam optimiser for 40 epochs, with weight decay and learning rate scheduling. Pretrained ResNet18 backbones used in all branches.</li>
   <li><strong>Qualitative Results:</strong> Visual tests show the two-stage model is more robust to occlusion, lighting variation, and minor part differences.</li>
 </ul>
