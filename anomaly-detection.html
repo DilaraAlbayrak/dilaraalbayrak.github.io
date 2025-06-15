@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Skeleton Detection</title>
+    <title>Anomaly Detection</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -77,10 +77,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Skeleton Detection and Hand Tracking</h1>
+        <h1 class="heading-primary">Anomaly Detection for Manufacturing Parts</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            This project focuses on skeleton detection, particularly for hand and body poses, using various implementations and addressing challenges such as glove detection and real-time performance.
+            This project utilises OpenCV to perform anomaly detection and paint quality control on manufacturing parts, comparing original images with detected defects. The system highlights anomalies, such as paint imperfections. It aims to enhance quality assurance by identifying and localising issues in real-time during production.
           </p>
         </div>
       </div>
@@ -92,32 +92,15 @@
             <div class="project-details__tools-used">
               <div class="skills">
                 <div class="skills__skill">Python</div>
+                <div class="skills__skill">OpenCV</div>
+                <div class="skills__skill">Qt</div>
                 <div class="skills__skill">Linux</div>
-                <div class="skills__skill">Academic Research</div>
-                <div class="skills__skill">Pose Estimation</div>
                 <div class="skills__skill">Image Processing</div>
-                <div class="skills__skill">Tensorflow</div>
               </div>
             </div>
-          <div class="project-details__showcase-img-cont project-details__video-wrapper">
-  <img src="./assets/gif/hand.gif" alt="Hand GIF" class="project-details__video" style="width: 48%; display: inline-block; margin-right: 10px;" />
-  <img src="./assets/gif/skeleton.gif" alt="Skeleton GIF" class="project-details__video" style="width: 48%; display: inline-block; margin-left: 10px;" />
-</div>
-          <div class="project-details__content-main">
-            <div class="project-details__desc">
-  <h3 class="project-details__content-title">Project Overview</h3>
-<ul class="project-details__desc-list">
-  <li>The project explores pose estimation with a focus on hand and body detection, leveraging existing research papers and their implementations to achieve real-time performance.</li>
-  <li><strong>Hand Pose Estimation:</strong> We adopted the approach presented in <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Fan_Emotional_Attention_A_CVPR_2018_paper.pdf" target="_blank" rel="noopener noreferrer">
-  <strong>Convolutional Pose Machines ↗</strong></a> paper.
-  </li>
-  <li><strong>Body Pose Estimation:</strong> We built it on the TensorFlow implementation of <a href="https://arxiv.org/pdf/1812.08008" target="_blank" rel="noopener noreferrer">
-  <strong>OpenPose: Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields ↗</strong></a>.</li>
-  <li><strong>Glove Detection Challenges:</strong> Adjusted color masks for detection, successful with different colours.</li> 
-    </ul>
-</ul>
-</div>
-          </div>
+         <div class="project-details__showcase-img-cont project-details__video-wrapper">
+    <video src="./assets/videos/anomaly.mp4" class="project-details__video" controls preload="metadata"></video>
+  </div>
         </div>
       </div>
     </section>
