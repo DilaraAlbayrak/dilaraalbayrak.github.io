@@ -469,16 +469,15 @@ textarea {
 
 .project-details__desc-list {
   list-style: disc;
-  margin-left: 2rem;
-  padding-left: 2rem;
+  margin-left: 2.5rem;
+  padding-left: 0;
   font-size: 1.8rem;
-  color: #000; /* Siyah metin */
+  color: #000;
   line-height: 1.8;
 }
 
 .project-details__desc-list li {
   margin-bottom: 1.5rem;
-  padding-left: 0.5rem;
 }
 
 .media-caption {
