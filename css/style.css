@@ -468,27 +468,17 @@ textarea {
 }
 
 .project-details__desc-list {
-  list-style: none;
-  padding-left: 0;
+  list-style: disc;
+  margin-left: 2rem;
+  padding-left: 2rem;
   font-size: 1.8rem;
-  color: #000;
+  color: #000; /* Siyah metin */
   line-height: 1.8;
 }
 
 .project-details__desc-list li {
-  position: relative;
   margin-bottom: 1.5rem;
-  padding-left: 2.5rem;
-}
-
-.project-details__desc-list li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
-  color: #0062b9;
-  font-size: 2rem;
-  line-height: 1;
+  padding-left: 0.5rem;
 }
 
 .media-caption {
