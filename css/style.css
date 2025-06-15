@@ -491,6 +491,20 @@ textarea {
   line-height: 1;
 }
 
+.project-details__video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.project-details__video {
+  width: 70%;
+  max-width: 960px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
 .media-caption {
   font-size: 1.3rem;
   font-weight: 500;
