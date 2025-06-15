@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Visual Saliency</title>
+    <title>Manufacturing Part Recognition</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -77,10 +77,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">A Study of Visual Saliency for Free-Viewing And Task-Oriented Condition</h1>
+        <h1 class="heading-primary">Manufacturing Part Recognition by Training 2D Views</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            This master's project explores task-oriented visual saliency using deep learning techniques, focusing on how visual attention changes based on the viewer's goal. Building upon collected eye-tracking data for different viewing tasks, it employs various GAN-based architectures to predict attention maps that align with task-specific gaze patterns. A publicly shared gaze dataset was introduced in this study.
+            This is a work-in-progress project focused on developing a distributed, networked physics simulation. The system combines real-time multithreaded physics, collision response, and peer-to-peer networking using DirectX 11 and Winsock 2.
           </p>
         </div>
       </div>
@@ -89,47 +89,36 @@
       <div class="main-container">
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont project-details__video-wrapper">
-    <img src="./assets/png/saliency.png" alt="Paper Preview" class="project-details__video" />
+    <video src="./assets/videos/room.mp4" class="project-details__video" controls preload="metadata"></video>
   </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
   <p class="project-details__desc-para">
-    Initially, we prepared an experiment setting with 492 still images from existing datasets. Half of the images were chosen from EMotional Attention Dataset (EMOd) dataset and the other half of the images were chosen from Saliency in Crowd (EyeCrowd) dataset. Our experiment setting is designed as between-subjects; in total, we have four groups of participants, three of which perform three assigned tasks on the same 492 images, whereas one group is asked to free-view the same 492 images. We also referred to free-viewing as a task (the task of no task). The dataset is publicly available.
+    This ongoing project involves building a distributed, peer-to-peer physics simulation, where objects from multiple computers interact in real time within a shared physics-based environment. The simulation integrates multithreaded physics (gravity, collision detection and response), synchronised global state, and adjustable simulation frequencies, all developed using DirectX 11 and Winsock 2. Above video is a snapshot of the early stage of the project.
   </p>
-<ul class="project-details__desc-list">
-  <li>For task 1, we asked the participants to count people in the frame, if any, as they can, and come up with a number, the number does not necessarily have to be very exact, the amount that they could count.</li>
-  <li>For task 2, we asked the participants to find an answer for emotion in the frame and people’s feelings in the frame. Before the experiment, some examples are given as 'sad', 'happy', 'angry', etc. and they were also free to choose different words for the emotions as they can think of during viewing.</li>
-  <li>For task 3, the participants were asked to define the occasion in the frame, if any, or what person/people in the frame is/are doing.</li>
-  <li>Task 4 is free-viewing in which the participants were not asked for any task they were told to view shown images, freely.</li>
-</ul>
 </div>
 
             <div class="project-details__tools-used">
               <div class="skills">
-                <div class="skills__skill">GAN</div>
-                <div class="skills__skill">SMI BeGaze Software</div>
-                <div class="skills__skill">SMI IViewX</div>
-                <div class="skills__skill">User Experiment</div>
-                <div class="skills__skill">Visual Saliency</div>
-                <div class="skills__skill">Eye-Tracking</div>
-                <div class="skills__skill">SMI Eye Tracker</div>
-                <div class="skills__skill">Academic Writing</div>
-                <div class="skills__skill">Academic Research</div>
+                <div class="skills__skill">DirectX 11</div>
+                <div class="skills__skill">C++</div>
+                <div class="skills__skill">Physics Simulation</div>
+                <div class="skills__skill">Multithreading</div>
+                <div class="skills__skill">Concurrency</div>
+                <div class="skills__skill">P2P Networking</div>
+                <div class="skills__skill">Winsock 2</div>
+                <div class="skills__skill">UDP</div>
+                <div class="skills__skill">ImGui</div>
+                <div class="skills__skill">FlatBuffers</div>
               </div>
             </div>
             <div class="project-details__links">
               <a
-                href="https://www.researchgate.net/profile/Dilara-Albayrak/publication/351093968_A_STUDY_OF_VISUAL_SALIENCY_FOR_FREE-VIEWING_AND_TASK-ORIENTED_CONDITION/links/6085c07d8ea909241e261a01/A-STUDY-OF-VISUAL-SALIENCY-FOR-FREE-VIEWING-AND-TASK-ORIENTED-CONDITION.pdf"
+                href="https://github.com/DilaraAlbayrak/distributed-simulation"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
-                >Master's Thesis</a
-              >
-              <a
-                href="https://github.com/DilaraAlbayrak/Task-based-eye-fixation-dataset"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Dataset</a
+                >Code Link</a
               >
             </div>
           </div>
