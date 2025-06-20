@@ -120,8 +120,10 @@
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
   <p class="project-details__desc-para">
-    At this early stage, I am exploring which graphics API best suits the project's requirements. The videos above demonstrate the initial output of rendering a low-resolution Moon terrain using Vulkan or DirectX 11. My aim is to select one of these APIs and refine the rendering pipeline in line with academic research and performance optimisation strategies. Below table shows my initial findings (on NVIDIA GTX 1050).
+    At this early stage, I am exploring which graphics API best suits the project's requirements. The videos above demonstrate the initial output of rendering a low-resolution Moon terrain using Vulkan or DirectX 11. My aim is to select one of these APIs and refine the rendering pipeline in line with academic research and performance optimisation strategies. Below tables show my initial findings (left NVIDIA GTX 1050, right NVIDIA RTX 3070).
   </p>
+              <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <div style="flex: 1;">
   <table>
     <thead>
       <tr>
@@ -148,6 +150,37 @@
       </tr>
     </tbody>
   </table>
+         </div>
+
+      <div style="flex: 1;">     
+  <table>
+    <thead>
+      <tr>
+        <th><br>num. faces</th>
+        <th>Vulkan</th>
+        <th>DirectX11</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>800k</td>
+        <td>~8000 FPS</td>
+        <td>~3200 FPS</td>
+      </tr>
+      <tr>
+        <td>2m</td>
+        <td>~5000 FPS</td>
+        <td>~1200</td>
+      </tr>
+      <tr>
+        <td>8m</td>
+        <td>~1500</td>
+        <td>~400</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+    </div>      
 </div>
           </div>
         </div>
