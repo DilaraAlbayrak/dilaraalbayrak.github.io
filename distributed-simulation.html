@@ -77,10 +77,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Networked AntiGravity Chamber (Work-in-Progress)</h1>
+        <h1 class="heading-primary">Networked AntiGravity Chamber</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            This is a work-in-progress project focused on developing a distributed, networked physics simulation. The system combines real-time multithreaded physics, collision response, and peer-to-peer networking using DirectX 11 and Winsock 2.
+            This project focused on developing a distributed, networked physics simulation. The system combines real-time multithreaded physics, collision response, and peer-to-peer networking using DirectX 11 and Winsock 2.
           </p>
         </div>
         <div class="project-details__links" style="text-align: center; margin-top: 40px;">
@@ -118,8 +118,26 @@
             <div class="project-details__desc">
   <h3 class="project-details__content-title">Project Overview</h3>
   <p class="project-details__desc-para">
-    This ongoing project involves building a distributed, peer-to-peer physics simulation, where objects from multiple computers interact in real time within a shared physics-based environment. The simulation integrates multithreaded physics (gravity, collision detection and response), synchronised global state, and adjustable simulation frequencies, all developed using DirectX 11 and Winsock 2. Above video is a snapshot of the early stage of the project.
+    This ongoing project involves building a distributed, peer-to-peer physics simulation, where objects from multiple computers interact in real time within a shared physics-based environment. The simulation integrates multithreaded physics (gravity, collision detection and response), synchronised global state, and adjustable simulation frequencies, all developed using DirectX 11 and Winsock 2. 
   </p>
+  <ul class="project-details__desc-list">
+    <li>
+      Built on a peer-to-peer (P2P) model, explicitly avoiding a client-server setup. Google Flatbuffers for efficient, low-overhead data serialization of network messages.
+</li>
+    <li>
+      Features a state-smoothing mechanism that interpolates object positions to mitigate visual judder from network latency.
+</li>
+    <li>
+      Leverages modern C++ concurrency primitives including std::thread, std::mutex, std::shared_mutex, std::condition_variable, and std::barrier.
+</li>
+    <li>
+      Implements multiple integration methods, including Semi-Implicit Euler, Midpoint, and Runge-Kutta 4 (RK4), for calculating object motion.
+</li>
+    <li>
+      Realistic collision responses based on momentum conservation, with advanced features like material-based elasticity (bounciness) and friction (static and dynamic) managed via lookup tables.
+</li>
+
+  </ul>
 </div>
           </div>
         </div>
