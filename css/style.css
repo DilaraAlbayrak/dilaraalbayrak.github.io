@@ -332,23 +332,23 @@ textarea {
 }
 
 .project--highlighted .projects__img-wrapper {
-  position: relative; /* Kurdeleyi konumlandırmak için gereklidir */
-  overflow: hidden; /* Kurdelenin taşan kısımlarını gizler */
+  position: relative;
+  overflow: hidden; 
   border-radius: 5px;
 }
 
 .project--highlighted .projects__img-wrapper::after {
-  content: 'Öne Çıkan'; /* Kurdele metni */
+ 
   position: absolute;
   top: 20px;
   right: -30px;
-  background-color: #0062b9; /* Ana renk */
+  background-color: #0062b9; 
   color: white;
   padding: 8px 40px;
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
-  transform: rotate(45deg); /* Kurdeleyi çapraz hale getirir */
+  transform: rotate(45deg);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
   letter-spacing: 1px;
