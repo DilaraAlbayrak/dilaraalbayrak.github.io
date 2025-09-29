@@ -333,8 +333,8 @@ textarea {
 
 .project--highlighted .projects__img-wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 5px; 
+   display: block; 
+  overflow: visible; 
 }
 
 .project--highlighted .projects__img-wrapper::after {
