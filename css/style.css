@@ -338,7 +338,7 @@ textarea {
 }
 
 .project--highlighted .projects__img-wrapper::after {
- 
+  content: '';
   position: absolute;
   top: 20px;
   right: -30px;
