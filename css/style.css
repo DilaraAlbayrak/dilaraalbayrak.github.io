@@ -340,8 +340,8 @@ textarea {
 .project--highlighted .projects__img-wrapper::after {
   content: ''; 
   position: absolute;
-  top: 15px;
-  right: -30px;
+  top: 20px;
+  right: -35px;
   background-color: #26875f; 
   color: white;
   padding: 8px 40px;
