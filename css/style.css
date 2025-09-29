@@ -334,7 +334,7 @@ textarea {
 .project--highlighted .projects__img-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 0px; 
+  border-radius: 5px; 
 }
 
 .project--highlighted .projects__img-wrapper::after {
