@@ -185,6 +185,23 @@
   </table>
   </div>
     </div>      
+<p class="project-details__desc-para">
+    <strong>From Static Mesh to Dynamic LOD</strong> The first stage involved rendering a static, high-polygon .obj mesh to establish a performance baseline. To manage the immense geometric complexity required for a large-scale terrain, I implemented a dynamic LOD system using hardware tessellation shaders. This approach offloads geometry generation to the GPU, which dynamically subdivides a simple control grid based on camera distance and uses a 16-bit heightmap for displacement. The results showed this method was highly efficient, rendering visually complex and dynamic geometry with minimal performance cost compared to rendering a dense static mesh.
+  </p>
+  <p class="project-details__desc-para">
+    <strong>Simulating VR Workloads: Stereo Rendering</strong> To analyse performance under VR-like conditions, I implemented two distinct stereo rendering methods:
+    <ul class="project-details__desc-list">
+    <li>
+      <strong>Single-Pass Stereo:</strong> A hardware-accelerated approach leveraging Vulkan's multiview feature, which allows the GPU to process geometry once and broadcast it to two view layers in a single draw call.
+    </li>
+    <li>
+      <strong>Multi-Pass Stereo:</strong> A software-driven approach that manually renders the scene twice per frame—once for each eye—by issuing two separate draw calls.
+    </li>
+  </ul>
+  </p>
+  <p class="project-details__desc-para">
+    <strong>PC-tethered VR streaming</strong> The final implementation of the project was the integration of the optimized rendering pipeline with the OpenXR. This enabled the high-fidelity lunar terrain to be streamed to a head-mounted display (Meta Quest 3), successfully delivering a PC-tethered VR implementation.
+  </p>
 </div>
           </div>
         </div>
