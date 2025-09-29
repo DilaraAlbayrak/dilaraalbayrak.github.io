@@ -331,6 +331,23 @@ textarea {
   background: #FFFFFF;
 }
 
+.project--highlighted .projects__img-wrapper {
+  border: 3px solid #0062b9; /* Sitenizin ana rengiyle uyumlu bir kenarlık */
+  box-shadow: 0 8px 25px rgba(0, 98, 185, 0.2); /* Dikkat çekici bir gölge */
+  border-radius: 8px; /* Kenarları yumuşatır */
+  background-color: #f5faff; /* Çok hafif mavi bir arka plan tonu */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.project--highlighted:hover .projects__img-wrapper {
+  transform: scale(1.05); /* Vurgulanan projelerin üzerine gelince biraz daha fazla büyüsün */
+  box-shadow: 0 12px 35px rgba(0, 98, 185, 0.3);
+}
+
+.project--highlighted .projects__img-label {
+  color: #004a8f; /* Etiket rengini biraz daha koyu yapabiliriz */
+}
+
 .projects__row-img {
   width: 100%;
   height: 100%;
