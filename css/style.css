@@ -333,22 +333,23 @@ textarea {
 
 .project--highlighted {
   position: relative;
-  display: block; 
-  overflow: visible; 
+  display: block;
+  overflow: visible;
 }
 
 .project--highlighted::after {
   content: '';
   position: absolute;
-  width: 90px; 
-  height: 30px; 
-  top: 10px;    
-  right: -20px;   
-  background-color: #26875f; 
-  transform: rotate(45deg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  width: 150px;
+  height: 28px;
+  background-color: #26875f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  right: -35px;
+  top: 20px;
+  transform: rotate(45deg);
 }
+
 .project--highlighted .projects__img-wrapper {
    overflow: visible;
 }
