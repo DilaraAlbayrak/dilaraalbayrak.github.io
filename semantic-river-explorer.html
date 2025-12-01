@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Semantic River Explorer</title>
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/dilara-albayrak.png"
+              alt="Dilara Albayrak Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Dilara Albayrak</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Building a Semantic Geospatial Agent: A Hybrid .NET & Python Approach</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            This project explores the technical challenges of bridging .NET 8 and Python micro services, implementing vector search, and visualising complex topology using the OS Open Rivers dataset.
+          </p>
+        </div>
+        <div class="project-details__links" style="text-align: center; margin-top: 40px;">
+      <a
+                href="https://github.com/DilaraAlbayrak/semantic-river-explorer"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+    </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__tools-used">
+              <div class="skills" style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div class="skills__skill">C#</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">PostGIS</div>
+                <div class="skills__skill">GeoJSON</div>
+                <div class="skills__skill">ETL</div>
+                <div class="skills__skill">Semantic Search</div>
+                <div class="skills__skill">RESTful API Design</div>
+              </div>
+            </div>
+          <div class="project-details__showcase-img-cont project-details__video-wrapper">
+    <img src="./assets/png/openrivers_UI.PNG" alt="UI" class="media-image" style="margin-right: 10px;" />
+            <img src="./assets/png/architecture.png" alt="architecture" class="media-image" style="margin-left: 10px;" />
+  </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+  <h3 class="project-details__content-title">Project Overview</h3>
+  <p class="project-details__desc-para">
+    Semantic Geospatial Agent Engineered as an initial work for a full-stack search engine to solve data discovery challenges within the OS Open Rivers topology. The solution utilises PostGIS for coordinate transformation and efficient bounding-box visualisation of the complete 190,000-link network. Simultaneously, it integrates a Python-based Transformer model to enable semantic querying on a randomly sampled dataset, validating the feasibility of vector search for hydrological features without the overhead of full-scale indexing in a development environment.
+  </p>
+  <ul class="project-details__desc-list">
+    <li>
+      Scalability: The current in-memory vector search (O(N) complexity) is fast for 200k rows, but will degrade linearly. Implementing HNSW (Hierarchical Navigable Small World) indexing via pgvector would reduce search complexity to O(logN).
+</li>
+    <li>
+      To handle O(N) complexity on a local development machine, the current semantic index is intentionally restricted to a representative sample of 1,000 records, ensuring real-time responsiveness during the PoC phase.
+</li>
+    <li>
+      Containerization: The dependency on a running local Python instance makes deployment fragile. Wrapping both the API and the Python service in Docker containers (via docker-compose) is a logical next step.
+</li>
+    <li>
+      Search Robustness: Currently, the system relies purely on semantic similarity. A Hybrid Search would offer the best of both worlds, catching exact name matches that the semantic model might sometimes overlook.
+</li>
+
+  </ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dilara-albayrak-45b284193/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/DilaraAlbayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico2.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.researchgate.net/profile/Dilara-Albayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/researchgate-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Dilara Albayrak</h4>
+            <p class="main-footer__short-desc">
+              You can contact me via <a href="mailto:dilara0albayrak@gmail.com">dilara0albayrak@gmail.com</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2025
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
