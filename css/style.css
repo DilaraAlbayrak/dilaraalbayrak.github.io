@@ -307,6 +307,32 @@ textarea {
         margin-bottom: 4rem; }
 
 
+.about__content {
+  display: flex;
+  gap: 2rem; /* Spacing between the two columns, adjust as needed */
+}
+
+.about__content-main {
+  flex: 3; /* Represents 60% of the container */
+}
+
+.about__content-skills {
+  flex: 2; /* Represents 40% of the container */
+}
+
+/* Optional: Stack the columns vertically on smaller screens */
+@media (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+  }
+  
+  .about__content-main,
+  .about__content-skills {
+    width: 100%;
+  }
+}
+
+
 .projects__img-link {
   width: 100%; /* Tam genişlik */
   aspect-ratio: 8 / 7; /* Oran korunsun */
