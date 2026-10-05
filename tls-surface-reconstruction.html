@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Terrestrial Laser Scan Surface Reconstruction</title>
+    <meta
+      name="description"
+      content="A C++ pipeline for reconstructing a triangle mesh from a large terrestrial laser scan using voxel downsampling, PCA normals, MST orientation, and Poisson reconstruction."
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/dilara-albayrak.png"
+              alt="Dilara Albayrak Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Dilara Albayrak</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link">Home</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About</a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">Projects</a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about">About</a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Terrestrial Laser Scan Surface Reconstruction</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A C++ pipeline that turns a large, unstructured terrestrial laser scan into a triangle mesh. The project processes the approximately 40-million-point Semantic3D birdfountain scene through binary caching, voxel grid downsampling, KD-tree neighbour search, PCA normal estimation, MST-based normal orientation, and Poisson surface reconstruction.
+          </p>
+        </div>
+        <div class="project-details__links" style="text-align: center; margin-top: 40px;">
+          <a
+            href="https://github.com/DilaraAlbayrak/tls-surface-reconstruction"
+            class="btn btn--med btn--theme-inv project-details__links-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code Link</a
+          >
+          <a
+            href="https://medium.com/@dilara_albayrak/meshing-a-terrestrial-laser-scan-78309e303649"
+            class="btn btn--med btn--theme-inv project-details__links-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Medium Post</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__tools-used">
+            <div class="skills" style="display: flex; justify-content: center; flex-wrap: wrap;">
+              <div class="skills__skill">C++</div>
+              <div class="skills__skill">CMake</div>
+              <div class="skills__skill">Open3D</div>
+              <div class="skills__skill">Eigen</div>
+              <div class="skills__skill">nanoflann</div>
+              <div class="skills__skill">OpenMP</div>
+              <div class="skills__skill">Point Clouds</div>
+              <div class="skills__skill">3D Reconstruction</div>
+              <div class="skills__skill">Computer Graphics</div>
+            </div>
+          </div>
+
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/3d.png"
+              alt="Comparison of Poisson surface reconstructions generated with different voxel sizes and octree depths"
+              class="project-details__showcase-img"
+            />
+          </div>
+
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                The project explores the full path from raw terrestrial laser scanner output to an exportable mesh. Its input is the Semantic3D <strong>birdfountain_station1</strong> dataset, where every point stores XYZ position, intensity, and RGB colour. Because repeatedly parsing tens of millions of text rows is expensive, the first run writes a compact binary cache that allows later runs to load the point cloud directly into memory.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Efficient Point-Cloud Processing</strong> The implementation follows a data-oriented design with flat point arrays and separates storage from processing. A sparse voxel grid reduces the original cloud from roughly 40 million to 11.8 million representative points at the default 1 cm voxel size. A nanoflann KD-tree then provides fast nearest-neighbour queries without copying the underlying coordinates, while OpenMP parallelises the costly per-point calculations.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Normal Estimation and Orientation</strong> For each point, the pipeline finds 15 neighbours and uses Eigen to perform PCA on the local covariance matrix. The eigenvector associated with the smallest eigenvalue becomes the surface normal. Since PCA cannot determine whether a normal faces inward or outward, a minimum spanning tree propagates a consistent orientation from a seed normal directed towards the scanner origin.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Poisson Surface Reconstruction</strong> The oriented point cloud is passed to Open3D's Poisson reconstruction solver, followed by removal of the lowest-density 10% of vertices. Experiments compare voxel sizes of 1 cm and 5 mm at octree depths 10, 13, and 16. Depth 13 provides the most practical quality-to-cost balance: it preserves facade and window detail without the steep memory and processing cost of depth 16.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Limitations and Next Steps</strong> Poisson reconstruction performs well on the building facade, but vegetation exposes the method's watertight-surface assumption. Thin branches, overlapping leaves, occlusion, and inconsistent normals can merge into artificial volumes. A stronger production workflow would segment the scan before meshing, retain Poisson reconstruction for buildings and ground, and use structure-aware tree models or additional scan viewpoints for vegetation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dilara-albayrak-45b284193/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/DilaraAlbayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico2.png"
+                  alt="GitHub"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.researchgate.net/profile/Dilara-Albayrak">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/researchgate-ico.png"
+                  alt="ResearchGate"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Dilara Albayrak</h4>
+            <p class="main-footer__short-desc">
+              You can contact me via <a href="mailto:dilara0albayrak@gmail.com">dilara0albayrak@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="main-footer__lower">
+          &copy; Copyright 2025
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

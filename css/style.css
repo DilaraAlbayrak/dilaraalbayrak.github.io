@@ -422,6 +422,16 @@ textarea {
   max-width: 90%; /* Monitör genişliğini aşmasın */
 }
 
+.project--scan .projects__img-label {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.66);
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
+  line-height: 1.25;
+  text-shadow: none;
+}
+
 .projects__row {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
